@@ -16,7 +16,7 @@ classifiers = [
 dependencies = [
     "click~=8.1",
     "gspread~=5.11",
-    "importlib-metadata~=4.0",
+    "importlib-metadata~=6.8",
     "jupyter~=1.0",
     "jupyterlab~=4.0",
     "matplotlib~=3.8",
@@ -30,7 +30,7 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 tests = [
-    "approvaltests~=8.2",
+    "approvaltests~=9.0",
     "bandit[toml]~=1.7",
     "flake8~=6.1",
     "pylint~=2.17",
