@@ -1,0 +1,69 @@
+[project]
+name = "algorithmic-quality-decision-making"
+description = "TODO"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "click~=8.1",
+    "gspread~=5.11",
+    "importlib-metadata~=4.0",
+    "jupyter~=1.0",
+    "jupyterlab~=4.0",
+    "matplotlib~=3.8",
+    "numpy~=1.26",
+    "openpyxl~=3.1",
+    "pandas~=2.1",
+    "seaborn~=0.13.0",
+    "statsmodels~=0.14.0",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = [
+    "approvaltests~=8.2",
+    "bandit[toml]~=1.7",
+    "flake8~=6.1",
+    "pylint~=2.17",
+    "pytest~=7.4",
+    "pytest-cov~=4.0",
+]
+
+[build-system]
+requires = ["setuptools>=50", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["algorithmic_quality_decision_making"]
+namespaces = false
+
+[tool.setuptools.package-data]
+mypkg = ["*.txt", "*.md", "*.rst"]
+
+[tool.setuptools_scm]
+
+[tool.pylint.messages_control]
+disable = [
+    "C",
+    "R",
+    "fixme",
+    "logging-fstring-interpolation"
+]
+
+[tool.bandit.assert_used]
+skips = ["**/test_*.py"]
+
+[tool.pytest.ini_options]
+log_cli = "True"
