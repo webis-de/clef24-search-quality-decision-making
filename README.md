@@ -1,8 +1,10 @@
+<!--
 [![CI](https://img.shields.io/github/actions/workflow/status/heinrichreimer/algorithmic-quality-decision-making/ci.yml?branch=main&style=flat-square)](https://github.com/heinrichreimer/algorithmic-quality-decision-making/actions/workflows/ci.yml)
 [![Code coverage](https://img.shields.io/codecov/c/github/heinrichreimer/algorithmic-quality-decision-making?style=flat-square)](https://codecov.io/github/heinrichreimer/algorithmic-quality-decision-making/)
 [![Issues](https://img.shields.io/github/issues/heinrichreimer/algorithmic-quality-decision-making?style=flat-square)](https://github.com/heinrichreimer/algorithmic-quality-decision-making/issues)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/heinrichreimer/algorithmic-quality-decision-making?style=flat-square)](https://github.com/heinrichreimer/algorithmic-quality-decision-making/commits)
 [![License](https://img.shields.io/github/license/heinrichreimer/algorithmic-quality-decision-making?style=flat-square)](LICENSE)
+-->
 
 # 🆚 algorithmic-quality-decision-making
 
