@@ -8,7 +8,7 @@
 
 # 🆚 algorithmic-quality-decision-making
 
-Code and data for the paper "The Impact of Search Quality on Decision Making for Comparative Questions".
+Code and data for the paper "The Impact of Web Search Result Quality on Decision Making".
 
 ## Installation
 
