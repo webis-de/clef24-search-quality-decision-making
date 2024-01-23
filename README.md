@@ -12,13 +12,16 @@ Code and data for the paper "The Impact of Web Search Result Quality on Decision
 
 ## Installation
 
-1. Install [Python 3.9](https://python.org/downloads/)
-2. Create and activate virtual environment:
+1. Install [Python 3.11](https://python.org/downloads/)
+2. Create and activate the virtual environment:
+
     ```shell
-    python3.9 -m venv venv/
+    python3.11 -m venv venv/
     source venv/bin/activate
     ```
+
 3. Install dependencies:
+
     ```shell
     pip install -e .
     ```
