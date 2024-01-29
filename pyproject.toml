@@ -15,7 +15,7 @@ classifiers = [
 ]
 dependencies = [
     "click~=8.1",
-    "gspread~=5.11",
+    "gspread~=6.0",
     "importlib-metadata~=7.0",
     "ir-datasets~=0.5.5",
     "ir-measures~=0.3.3",
