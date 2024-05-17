@@ -16,12 +16,12 @@ In this repository, you'll find all annotations and study responses that were co
 
 |File|Description|
 |:--|:--|
-|`01-quality-agreement.xlsx`|Fleiss' kappa values per quality aspects.|
-|`02-quality.xlsx`|Quality annotations for each criterion's aspects|
-|`03-quality-recoded.xlsx`|Recoded quality annotations to separate combined fields.|
-|`04-quality-recoded-majority-vote.xlsx`|Final quality annotations after majority voting.|
-|`05-survey.xlsx`|Raw user study survey responses and topics.|
-|`06-study.xlsx`|Bundled topics, archived search results, quality assessments, and user study survey responses.|
+|[`01-quality-agreement.xlsx`](data/01-quality-agreement.xlsx)|Fleiss' kappa values per quality aspects.|
+|[`02-quality.xlsx`](data/02-quality.xlsx)|Quality annotations for each criterion's aspects|
+|[`03-quality-recoded.xlsx`](data/03-quality-recoded.xlsx)|Recoded quality annotations to separate combined fields.|
+|[`04-quality-recoded-majority-vote.xlsx`](data/04-quality-recoded-majority-vote.xlsx)|Final quality annotations after majority voting.|
+|[`05-survey.xlsx`](data/05-survey.xlsx)|Raw user study survey responses and topics.|
+|[`06-study.xlsx`](data/06-study.xlsx)|Bundled topics, archived search results, quality assessments, and user study survey responses.|
 
 ## Code
 
@@ -53,9 +53,9 @@ jupyter-notebook notebooks/<FILE>
 
 |File|Description|
 |:--|:--|
-|`agreement.ipynb`|Measuring the inter-rater agreement for the quality assessments.|
-|`evaluation_quality.ipynb`|Evaluation of the quality assessments.|
-|`evaluation_user_study.ipynb`|Evaluation of the user study responses and hypothesis tests.|
+|[`agreement.ipynb`](notebooks/agreement.ipynb)|Measuring the inter-rater agreement for the quality assessments.|
+|[`evaluation_quality.ipynb`](notebooks/evaluation_quality.ipynb)|Evaluation of the quality assessments.|
+|[`evaluation_user_study.ipynb`](notebooks/evaluation_user_study.ipynb)|Evaluation of the user study responses and hypothesis tests.|
 
 ## License
 
