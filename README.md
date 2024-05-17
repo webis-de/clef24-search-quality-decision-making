@@ -10,7 +10,24 @@
 
 Code and data for the paper "The Impact of Web Search Result Quality on Decision Making".
 
-## Installation
+## Data
+
+In this repository, you'll find all annotations and study responses that were collected as part of this research:
+
+|File|Description|
+|:--|:--|
+|`01-quality-agreement.xlsx`|Fleiss' kappa values per quality aspects.|
+|`02-quality.xlsx`|Quality annotations for each criterion's aspects|
+|`03-quality-recoded.xlsx`|Recoded quality annotations to separate combined fields.|
+|`04-quality-recoded-majority-vote.xlsx`|Final quality annotations after majority voting.|
+|`05-survey.xlsx`|Raw user study survey responses and topics.|
+|`06-study.xlsx`|Bundled topics, archived search results, quality assessments, and user study survey responses.|
+
+## Code
+
+We use Python notebooks to evaluate the quality assessments and user study responses. Follow the steps below to [install](#installation) and [run](#usage) the notebooks.
+
+### Installation
 
 1. Install [Python 3.11](https://python.org/downloads/)
 2. Create and activate the virtual environment:
@@ -26,16 +43,19 @@ Code and data for the paper "The Impact of Web Search Result Quality on Decision
     pip install -e .
     ```
 
-## Testing
+### Usage
 
-After [installing](#installation) all test dependencies (`pip install -e .[tests]`), you can run our approval tests:
+Once you have installed the required dependencies, you can launch the notebooks by running the following command (where `<FILE>` is a path from the list below):
 
-```shell script
-flake8 algorithmic_quality_decision_making  # Code style
-pylint algorithmic_quality_decision_making  # LINT errors
-bandit -c pyproject.toml -r algorithmic_quality_decision_making  # Security
-pytest algorithmic_quality_decision_making  # Unit tests
+```shell
+jupyter-notebook notebooks/<FILE>
 ```
+
+|File|Description|
+|:--|:--|
+|`agreement.ipynb`|Measuring the inter-rater agreement for the quality assessments.|
+|`evaluation_quality.ipynb`|Evaluation of the quality assessments.|
+|`evaluation_user_study.ipynb`|Evaluation of the user study responses and hypothesis tests.|
 
 ## License
 
