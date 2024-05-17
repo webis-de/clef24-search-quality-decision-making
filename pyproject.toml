@@ -15,7 +15,7 @@ classifiers = [
 ]
 dependencies = [
     "click~=8.1",
-    "gspread~=5.11",
+    "gspread~=6.0",
     "importlib-metadata~=7.0",
     "ir-datasets~=0.5.5",
     "ir-measures~=0.3.3",
@@ -32,12 +32,12 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 tests = [
-    "approvaltests~=10.0",
+    "approvaltests~=12.0",
     "bandit[toml]~=1.7",
     "flake8~=7.0",
     "pylint~=3.0",
-    "pytest~=7.4",
-    "pytest-cov~=4.0",
+    "pytest~=8.0",
+    "pytest-cov~=5.0",
 ]
 
 [build-system]
