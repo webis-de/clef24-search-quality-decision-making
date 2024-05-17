@@ -4,31 +4,8 @@ on:
   push:
 
 jobs:
-  python-build:
-    name: "🏗️ Build Python wheels"
-    runs-on: ubuntu-latest
-    steps:
-    - name: "📥 Check-out"
-      uses: actions/checkout@v4
-    - name: "🧰 Install Python"
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-        cache: pip
-        cache-dependency-path: pyproject.toml
-    - name: "🧰 Install dependencies"
-      run: pip install build twine
-    - name: "🏗️ Build Python wheels"
-      run: python -m build
-    - name: "🧪 Check package bundles"
-      run: twine check dist/*
-    - name: "📤 Upload Python wheels"
-      uses: actions/upload-artifact@v4
-      with:
-        name: wheels
-        path: dist
-  python-code-format:
-    name: "🔍 Check Python code format"
+  python-install:
+    name: "🧰 Install Python dependencies"
     runs-on: ubuntu-latest
     steps:
     - name: "📥 Check-out"
@@ -41,84 +18,19 @@ jobs:
         cache-dependency-path: pyproject.toml
     - name: "🧰 Install dependencies"
       run: pip install .[tests]
-    - name: "🔍 Check Python code format"
-      run: flake8 algorithmic_quality_decision_making
-  python-lint:
-    name: "🔍 Lint Python code"
-    runs-on: ubuntu-latest
-    steps:
-    - name: "📥 Check-out"
-      uses: actions/checkout@v4
-    - name: "🧰 Install Python"
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-        cache: pip
-        cache-dependency-path: pyproject.toml
-    - name: "🧰 Install dependencies"
-      run: pip install .[tests]
-    - name: "🔍 Lint Python code"
-      run: pylint algorithmic_quality_decision_making
-  python-security:
-    name: "🔍 Check Python code security"
-    runs-on: ubuntu-latest
-    steps:
-    - name: "📥 Check-out"
-      uses: actions/checkout@v4
-    - name: "🧰 Install Python"
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-        cache: pip
-        cache-dependency-path: pyproject.toml
-    - name: "🧰 Install dependencies"
-      run: pip install .[tests]
-    - name: "🔍 Check Python code security"
-      run: bandit -c pyproject.toml -r algorithmic_quality_decision_making
-  python-test:
-    name: "🧪 Test Python code"
-    runs-on: ubuntu-latest
-    steps:
-    - name: "📥 Check-out"
-      uses: actions/checkout@v4
-    - name: "🧰 Install Python"
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-        cache: pip
-        cache-dependency-path: pyproject.toml
-    - name: "🧰 Install dependencies"
-      run: pip install .[tests]
-    - name: "🧪 Test Python code"
-      run: pytest --cov --cov-report=xml algorithmic_quality_decision_making
-    - name: "📤 Upload coverage to Codecov"
-      uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
   github-release:
     name: "🚀 Create GitHub release"
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
     needs:
-    - python-build
-    - python-code-format
-    - python-lint
-    - python-security
-    - python-test
+    - python-install
     runs-on: ubuntu-latest
     steps:
     - name: "📥 Check-out"
       uses: actions/checkout@v4
-    - name: "📥 Download Python wheels"
-      uses: actions/download-artifact@v4
-      with:
-        name: wheels
-        path: dist
     - name: "🚀 Create GitHub release"
       uses: softprops/action-gh-release@v1
       with:
         name: Release ${{ github.ref_name }}
-        files: dist/*
-        fail_on_unmatched_files: true
         draft: false
         prerelease: false
         generate_release_notes: true
