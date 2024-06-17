@@ -1,5 +1,5 @@
 [project]
-name = "search-quality-decision-making"
+name = "clef24-search-quality-decision-making"
 description = "The Impact of Web Search Result Quality on Decision Making"
 readme = "README.md"
 requires-python = ">=3.9"
