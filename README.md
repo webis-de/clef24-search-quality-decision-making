@@ -8,7 +8,7 @@
 
 # 🆚 clef24-search-quality-decision-making
 
-Code and data for the paper [The Impact of Web Search Result Quality on Decision Making](https://webis.de/publications.html?q=comparative#reimer_2024).
+Code and data for the paper [The Impact of Web Search Result Quality on Decision Making](https://webis.de/publications.html?q=argument#reimer_2024).
 
 ## Data
 
