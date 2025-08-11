@@ -32,7 +32,7 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 tests = [
-    "approvaltests~=14.0",
+    "approvaltests~=15.1",
     "bandit[toml]~=1.7",
     "flake8~=7.0",
     "pylint~=3.0",
